@@ -1,7 +1,15 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HomeCards from './components/HomeCards';
+
 const App = () => {
 
-    return (
-        <h1>Hello, World!</h1>
-    );
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <HomeCards /> 
+    </>
+  );
 }
 export default App;
