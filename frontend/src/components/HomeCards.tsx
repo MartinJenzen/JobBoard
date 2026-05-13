@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Card from './Card.tsx';
 
-const HomeCards = () => {
+const HomeCards = (): React.JSX.Element => {
   return (
     <section className='py-4'>
       <div className='container-xl lg:container m-auto'>
