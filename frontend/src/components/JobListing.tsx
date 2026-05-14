@@ -1,21 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaMapMarker } from 'react-icons/fa';
-
-type Job = {
-    id: number;
-    title: string;
-    type: string;
-    description: string;
-    location: string;
-    salary: string;
-    company: {
-        name: string;
-        description: string;
-        contactEmail: string;
-        contactPhone: string;
-    }
-};
+import type { Job } from '../types/job';
 
 const JobListing = ({ job }: { job: Job }): React.JSX.Element => {
 
