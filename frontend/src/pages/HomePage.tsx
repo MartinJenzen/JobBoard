@@ -11,6 +11,6 @@ const HomePage = (): React.JSX.Element => {
       <JobListings isHome={true} />
       <ViewAllJobs />
     </>
-  )
+  );
 }
 export default HomePage;
