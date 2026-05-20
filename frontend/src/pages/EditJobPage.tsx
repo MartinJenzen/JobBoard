@@ -3,9 +3,9 @@ import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import type { Job } from '../types/job';
 
-interface EditJobPageProps {
+type EditJobPageProps = {
   updateJobSubmit: (job: Job) => Promise<void>;
-}
+};
 
 const EditJobPage = ({ updateJobSubmit }: EditJobPageProps): React.JSX.Element => {
     
@@ -31,18 +31,18 @@ const EditJobPage = ({ updateJobSubmit }: EditJobPageProps): React.JSX.Element =
     event.preventDefault();
 
     const updatedJob: Job = {
-        id,
-        title,
-        type,
-        location,
-        description,
-        salary,
-        company: {
+      id,
+      title,
+      type,
+      location,
+      description,
+      salary,
+      company: {
         name: companyName,
         description: companyDescription,
         contactEmail,
         contactPhone,
-        }
+      }
     };
 
     try {
@@ -251,7 +251,7 @@ const EditJobPage = ({ updateJobSubmit }: EditJobPageProps): React.JSX.Element =
             {/* Update Job */}
             <div>
               <button
-                className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline cursor-pointer'
+                className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:shadow-outline cursor-pointer'
                 type='submit'
               >
                 Update Job

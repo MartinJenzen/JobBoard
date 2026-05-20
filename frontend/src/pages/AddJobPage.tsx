@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import type { Job } from '../types/job';
 
-interface AddJobPageProps {
+type AddJobPageProps = {
   addJobSubmit: (job: Job) => Promise<void>;
-}
+};
 
 const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
   
@@ -73,7 +73,7 @@ const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
             <button
               type='button'
               onClick={autoFillTestData}
-              className='bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mb-6 text-sm cursor-pointer'
+              className='bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full w-full focus:shadow-outline mb-6 text-sm cursor-pointer'
             >
               Auto-fill with Test Data
             </button>
@@ -266,7 +266,7 @@ const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
             {/* Add Job */}
             <div>
               <button
-                className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline cursor-pointer'
+                className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:shadow-outline cursor-pointer'
                 type='submit'
               >
                 Add Job

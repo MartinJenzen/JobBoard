@@ -3,9 +3,9 @@ import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import type { Job } from '../types/job';
 
-interface JobPageProps {
+type JobPageProps = {
   deleteJob: (id: string) => Promise<void>;
-}
+};
 
 const JobPage = ({ deleteJob }: JobPageProps): React.JSX.Element => {
   
@@ -103,7 +103,6 @@ const JobPage = ({ deleteJob }: JobPageProps): React.JSX.Element => {
 
                 {/* Contact Phone */}
                 <p className='my-2 bg-indigo-100 p-2 font-bold'>
-                  {' '}
                   {job.company.contactPhone}
                 </p>
               </div>

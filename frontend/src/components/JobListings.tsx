@@ -5,20 +5,22 @@ import Spinner from './Spinner';
 import type { Job } from '../types/job';
 import { fetchJobs } from '../services/jobService';
 
-interface JobListingsProps{
+type JobListingsProps = {
   isHome?: boolean;
   jobs?: Job[];
-}
+};
 
 const JobListings = ({ isHome = false, jobs: initialJobs }: JobListingsProps): React.JSX.Element => {
   
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(!initialJobs); // = true if initialJobs is empty
+  const displayedJobs = initialJobs ?? jobs;
   
   useEffect(() => {
     if (initialJobs)
       return;
 
+    // TODO: should maybe use the appropriate data loader instead?
     const loadJobs = async () => {
       try {
         const fetchedJobs = await fetchJobs(isHome);
@@ -35,8 +37,6 @@ const JobListings = ({ isHome = false, jobs: initialJobs }: JobListingsProps): R
 
     loadJobs();
   }, [isHome, initialJobs]);
-
-  const displayedJobs = initialJobs ?? jobs;
 
   return (
     <section className='bg-blue-50 px-4 py-10'>

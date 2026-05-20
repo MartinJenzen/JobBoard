@@ -24,6 +24,7 @@ const JobListing = ({ job }: { job: Job }): React.JSX.Element => {
           <h3 className='text-xl font-bold'>{job.title}</h3>
         </div>
 
+        {/* Description */}
         <div className='mb-5 flex-1'>{description}</div>
 
         {/* Read More/Less */}
@@ -34,6 +35,7 @@ const JobListing = ({ job }: { job: Job }): React.JSX.Element => {
           {showFullDescription ? 'Less' : 'More'}
         </button>
 
+        {/* Salary */}
         <h3 className='text-indigo-500 mb-2'>{job.salary} / Year</h3>
 
         <div className='border border-gray-100 mb-5'></div>
