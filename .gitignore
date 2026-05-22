@@ -1,1 +1,2 @@
 .vscode/launch.json
+backend/JobBoard.Api/bin/Debug/net10.0/appsettings.Development.json

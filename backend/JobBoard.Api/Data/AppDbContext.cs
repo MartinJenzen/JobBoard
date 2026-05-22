@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobBoard.Api.Data;
 
-// Represents the database session used by EF Core
+// Database session used by EF Core
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    // Provides access to the Jobs table
+    // Access to the Jobs table
     public DbSet<Job> Jobs => Set<Job>();
 
-    // Provides access to the Companies table
+    // Access to the Companies table
     public DbSet<Company> Companies => Set<Company>();
 
-    // Configures database rules for entity classes
+    // Configuration of database rules for entity classes
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Company entity configuration

@@ -8,7 +8,7 @@ export const fetchJobs = async (isHome: boolean = false): Promise<Job[]> => {
     throw new Error('Failed to fetch jobs!');
 
   const fetchedJobs = await response.json();
-  return isHome ? fetchedJobs.data : fetchedJobs;
+  return fetchedJobs;
 }
 
 export const addJob = async (newJob: Job): Promise<void> => {

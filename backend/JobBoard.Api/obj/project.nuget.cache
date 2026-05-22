@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ei+Dt7h8TL4=",
+  "dgSpecHash": "GmI9nOHS9bA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Martin\\Programming\\Projects\\ReactProjects\\JobBoard\\backend\\jobboard.api\\JobBoard.Api.csproj",
+  "projectFilePath": "C:\\Users\\Martin\\Programming\\Projects\\ReactProjects\\JobBoard\\backend\\JobBoard.Api\\JobBoard.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Martin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Martin\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
