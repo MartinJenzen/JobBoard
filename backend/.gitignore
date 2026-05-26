@@ -1,1 +1,6 @@
+JobBoard.Api/appsettings.json
 JobBoard.Api/appsettings.Development.json
+JobBoard.Api/obj
+JobBoard.Api/bin
+JobBoard.Api/bin/Debug/net10.0/appsettings.json
+JobBoard.Api/bin/Debug/net10.0/appsettings.Development.json
