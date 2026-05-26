@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import type { Job } from '../types/job';
+import type { NewJob } from '../types/job';
 
 type AddJobPageProps = {
-  addJobSubmit: (job: Job) => Promise<void>;
+  addJobSubmit: (job: NewJob) => Promise<void>;
 };
 
 const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
@@ -36,8 +36,7 @@ const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
   const submitForm = async (event: React.SubmitEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
 
-    const newJob: Job = {
-      id: '', // This will be replaced by the backend with the actual ID
+    const newJob: NewJob = {
       title,
       type,
       location,
@@ -58,7 +57,7 @@ const AddJobPage = ({ addJobSubmit }: AddJobPageProps): React.JSX.Element => {
     }
     catch (error) {
       toast.error('Failed to add job!', { autoClose: 2000 });
-      console.error(`Error adding job (ID: ${newJob.id}): `, error);
+      console.error(`Error adding job: `, error);
     }
   }
   

@@ -1,4 +1,4 @@
-import type { Job } from "../types/job";
+import type { Job, NewJob } from "../types/job";
 
 export const fetchJobs = async (isHome: boolean = false): Promise<Job[]> => {
   const jobsApiUrl = isHome ? 'jobs?_page=1&_per_page=3' : 'jobs';
@@ -11,7 +11,7 @@ export const fetchJobs = async (isHome: boolean = false): Promise<Job[]> => {
   return fetchedJobs;
 }
 
-export const addJob = async (newJob: Job): Promise<void> => {
+export const addJob = async (newJob: NewJob): Promise<void> => {
   const response = await fetch('/api/jobs', {
     method: 'POST',
     headers: {
@@ -25,7 +25,7 @@ export const addJob = async (newJob: Job): Promise<void> => {
     throw new Error('Failed to add job!');
 }
 
-export const deleteJob = async (id: string): Promise<void> => {
+export const deleteJob = async (id: number): Promise<void> => {
   const response = await fetch(`/api/jobs/${id}`, {
     method: 'DELETE'
   });

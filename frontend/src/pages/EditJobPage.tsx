@@ -22,16 +22,21 @@ const EditJobPage = ({ updateJobSubmit }: EditJobPageProps): React.JSX.Element =
   const [contactPhone, setContactPhone] = useState<string>(job?.company?.contactPhone ?? '');
 
   const navigate = useNavigate();
-  const { id } = useParams<{ id: string}>();
+  const { id } = useParams<{ id: string }>();
 
   if (!id) 
     return <div>Job ID missing!</div>;
+
+  const jobId = parseInt(id, 10);
+  
+  if (Number.isNaN(jobId))
+    return <div>Invalid Job ID!</div>;
 
   const submitForm = async (event: React.SubmitEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
 
     const updatedJob: Job = {
-      id,
+      id: jobId,
       title,
       type,
       location,

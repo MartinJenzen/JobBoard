@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import type { Job } from '../types/job';
 
 type JobPageProps = {
-  deleteJob: (id: string) => Promise<void>;
+  deleteJob: (id: number) => Promise<void>;
 };
 
 const JobPage = ({ deleteJob }: JobPageProps): React.JSX.Element => {
@@ -12,7 +12,7 @@ const JobPage = ({ deleteJob }: JobPageProps): React.JSX.Element => {
   const job = useLoaderData<Job>();
   const navigate = useNavigate();
 
-  const onDeleteClick = async (jobId: string): Promise<void> => {
+  const onDeleteClick = async (jobId: number): Promise<void> => {
     const confirm = window.confirm('Are you sure you want to delete this job?');
 
     if (!confirm)
